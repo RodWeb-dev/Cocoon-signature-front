@@ -1,0 +1,24 @@
+networks:
+  cocoon_network:
+    external: true
+
+services:
+  nuxt:
+    build: .
+    container_name: cocoon-front
+    restart: unless-stopped
+    volumes:
+      - ./src:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - NUXT_PUBLIC_API_URL=http://api.cocoon-signature.test
+      - NUXT_HOST=0.0.0.0
+      - NUXT_PORT=3000
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.front.rule=Host(`cocoon-signature.test`)"
+      - "traefik.http.routers.front.entrypoints=web"
+      - "traefik.http.services.front.loadbalancer.server.port=3000"
+    networks:
+      - cocoon_network
