@@ -45,6 +45,8 @@ build:
 # ─── DEPLOY STAGING ─────────────────────────────────────
 deploy:staging:
   stage: deploy
+  environment:
+    name: staging
   script:
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
     - docker pull $IMAGE_NAME:$IMAGE_TAG
@@ -52,10 +54,10 @@ deploy:staging:
     - docker push $IMAGE_NAME:latest
     - |
       cat > /srv/cocoon-signature/front/.env << EOF
-      NUXT_PUBLIC_API_URL=https://api.staging.cocoon-signature.fr
+      NUXT_API_URL=$NUXT_API_URL
       NODE_ENV=staging
       EOF
-    - docker compose -f /srv/cocoon-signature/front/docker-compose.yml up -d
+    - docker compose -f /srv/cocoon-signature/front/docker-compose.yml up -d --force-recreate
   rules:
     - if: $CI_COMMIT_BRANCH == "develop"
   tags:
@@ -64,6 +66,8 @@ deploy:staging:
 # ─── DEPLOY PROD ────────────────────────────────────────
 deploy:prod:
   stage: deploy
+  environment:
+    name: production
   script:
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
     - docker pull $IMAGE_NAME:$IMAGE_TAG
@@ -71,10 +75,10 @@ deploy:prod:
     - docker push $IMAGE_NAME:latest
     - |
       cat > /srv/cocoon-signature/front/.env << EOF
-      NUXT_PUBLIC_API_URL=https://api.cocoon-signature.fr
+      NUXT_API_URL=$NUXT_API_URL
       NODE_ENV=production
       EOF
-    - docker compose -f /srv/cocoon-signature/front/docker-compose.yml up -d
+    - docker compose -f /srv/cocoon-signature/front/docker-compose.yml up -d --force-recreate
   rules:
     - if: $CI_COMMIT_BRANCH == "main"
       when: manual
