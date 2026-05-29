@@ -23,7 +23,7 @@ secret_detection:
 # ─── TEST NUXT ──────────────────────────────────────────
 test:nuxt:
   stage: test
-  image: node:22-alpine
+  image: node@sha256:968df39aedcea65eeb078fb336ed7191baf48f972b4479711397108be0966920
   script:
     - cd src && npm ci && npm run build
   rules:
