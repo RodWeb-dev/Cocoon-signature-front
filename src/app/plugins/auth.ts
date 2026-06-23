@@ -6,7 +6,7 @@ export default defineNuxtPlugin({
         if (import.meta.client) return
 
         const config = useRuntimeConfig()
-        const baseURL = config.apiUrl as string
+        const baseURL = config.apiUrl
         const headers = useRequestHeaders(['cookie'])
         const accessToken = useState<string | null>('auth_token', () => null)
 
