@@ -43,5 +43,49 @@
         "error_403": "Accès interdit.",
         "error_404": "Données non trouvées.",
         "error_405": "Méthode non autorisée."
+    },
+    "link": {
+        "home": "Accueil",
+        "collections": "Visitez nos univers",
+        "products": "Découvrez nos créations",
+        "about": "À propos Cocoon Signature",
+        "contact": "Contact",
+        "philo": "Qualité haut de gamme et design unique",
+        "ressource": "Fabrication locales et respect de l'environnement",
+        "partenaire": "Nos partenaires",
+        "identite": "Qui sommes nous ?",
+        "ml": "Mentions légales",
+        "cgv": "Conditions générales de ventes",
+        "pc": "Politique de confidentialité",
+        "cookie": "Gestion des cookies",
+        "cgu": "Conditions générales d'utilisation"
+    },
+    "aria": {
+        "main_nav": "menu de navigation principale",
+        "modal_cart": "aperçu du panier",
+        "modal_user": "modale de connexion ou inscription"
+    },
+    "label": {
+        "email": "Adresse mail :"
+    },
+    "placeholder": {
+        "email": "adress\\@mail.fr",
+        "search": "Rechercher..."
+    },
+    "alt": {
+        "logo": "Logo de Cocoon Signature"
+    },
+    "newsletter": {
+        "hook": "Recevez par mail les dernières actualités et les offres de Cocoon Signature",
+        "rgpd": "En cochant cette case vous consentez à recevoir nos propositions par e-mail et acceptez que vos données soient traitées conformément à nos {cgu} et à notre {privacy}.",
+        "submit": "Inscription",
+        "accept_error": "Veuillez donner votre accord"
+    },
+    "brand": {
+        "hook": "Suivez notre activité sur les réseaux",
+        "coordonnees": "Nos coordonnées"
+    },
+    "home": {
+        "h1": "Cocoon Signature"
     }
 }

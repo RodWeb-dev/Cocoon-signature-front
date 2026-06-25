@@ -10,7 +10,9 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@iconify-json/carbon": "^1.2.23",
     "@nuxt/ui": "^4.9.0",
+    "@nuxtjs/color-mode": "^4.0.1",
     "@nuxtjs/i18n": "^10.4.0",
     "@tiptap/core": "^3.27.1",
     "@tiptap/extension-bubble-menu": "^3.27.1",
