@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Bellerose';
+    src:
+        url('/fonts/bellerose/BelleroseLight.woff2') format('woff2'),
+        url('/fonts/bellerose/BelleroseLight.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Autography';
+    src:
+        url('/fonts/autography/Autography.woff2') format('woff2'),
+        url('/fonts/autography/Autography.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Caviar Dreams';
+    src:
+        url('/fonts/caviardreams/CaviarDreams.woff2') format('woff2'),
+        url('/fonts/caviardreams/CaviarDreams.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lavinia';
+    src:
+        url('/fonts/lavinia/LaviniaRegular.woff2') format('woff2'),
+        url('/fonts/lavinia/LaviniaRegular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}

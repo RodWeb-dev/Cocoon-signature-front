@@ -1,0 +1,146 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+@import url('fonts.css');
+@import url('variables.css');
+
+
+@theme static {
+    --color-lightwood-50: #A88561;
+    --color-lightwood-100: #9C7752;
+    --color-lightwood-200: #8F6942;
+    --color-lightwood-300: #825B33;
+    --color-lightwood-400: #754d24;
+    --color-lightwood-500: #693E14;
+    --color-lightwood-600: #5C3005;
+    --color-lightwood-700: #4F2800;
+    --color-lightwood-800: #4F2800;
+    --color-lightwood-900: #361B00;
+
+    --color-darkwood-50: #594D40;
+    --color-darkwood-100: #4F4133;
+    --color-darkwood-200: #453626;
+    --color-darkwood-300: #3B2B1A;
+    --color-darkwood-400: #31200e;
+    --color-darkwood-500: #261400;
+    --color-darkwood-600: #1C0E00;
+    --color-darkwood-700: #170C00;
+    --color-darkwood-800: #120900;
+    --color-darkwood-900: #080400;
+}
+
+/*** Layout ***/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--secondary);
+    background-color: var(--bg-primary);
+    font-family: var(--text);
+    font-size: var(--font-size);
+    text-wrap: wrap;
+}
+
+button {
+    color: var(--primary);
+    cursor: pointer;
+}
+
+/*** Typo ***/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--headline);
+}
+
+h1 {
+    color: var(--primary);
+    font-size: var(--h1);
+    font-weight: 900;
+    line-height: calc(var(--h1) * 1.25);
+    margin: 1dvh 0;
+    text-align: center;
+}
+
+h2 {
+    color: var(--primary);
+    font-size: var(--h2);
+    font-weight: 700;
+    line-height: calc(var(--h2) * 1.25);
+    margin: 1dvh 0;
+}
+
+h3 {
+    color: var(--primary);
+    font-size: var(--h3);
+    font-weight: 600;
+    line-height: calc(var(--h3) * 1.25);
+    margin: 0.5dvh 0;
+}
+
+h4 {
+    color: var(--primary);
+    font-size: var(--h4);
+    font-weight: 500;
+    line-height: calc(var(--h4) * 1.25);
+    margin: 0.5dvh 0;
+}
+
+a,
+a:active,
+a:visited,
+label {
+    font-family: var(--interface);
+    color: var(--primary);
+    cursor: pointer;
+}
+
+/*** custom class ***/
+
+.wrapper {
+    width: 96%;
+    margin: 0 auto;
+    padding: 0 1%;
+}
+
+.main.wrapper {
+    position: relative;
+    flex: 1 0 auto;
+}
+
+.txt-primary {
+    color: var(--primary);
+}
+
+.txt-secondary {
+    color: var(--secondary);
+}
+
+.bg-primary {
+    background-color: var(--bg-primary);
+}
+
+.bg-secondary {
+    background-color: var(--bg-secondary);
+}
+
+/* === Tablet === */
+
+@media screen and (min-width: 768px) {
+    .wrapper {
+        width: 90%;
+    }
+}
+
+/* === Desktop === */
+
+@media screen and (min-width: 1200px) {
+    .wrapper {
+        width: clamp(960px, 80dvw, 1500px);
+    }
+}
