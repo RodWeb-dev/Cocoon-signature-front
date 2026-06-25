@@ -3,7 +3,7 @@ export const useApi = () => {
     const accessToken = useState<string | null>('auth_token', () => null)
 
     const baseURL = import.meta.server
-        ? (config.apiUrl as string)
+        ? (config.apiUrl)
         : '/api'
 
     const $api = $fetch.create({
@@ -22,4 +22,10 @@ export const useApi = () => {
     })
 
     return { $api, accessToken }
+}
+
+export type ApiResponse<T = unknown> = {
+    data: T
+    message: { key: string; params: object } | null
+    error: { key: string; params: object } | null
 }
