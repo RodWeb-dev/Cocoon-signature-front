@@ -1,6 +1,12 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
-  devtools: { enabled: true },
+  devtools: {
+    enabled: true,
+
+    timeline: {
+      enabled: true,
+    },
+  },
 
   vite: {
     server: {
@@ -8,7 +14,7 @@ export default defineNuxtConfig({
     }
   },
 
-  modules: ['@nuxt/ui', '@nuxtjs/i18n'],
+  modules: ['@nuxt/ui', '@nuxtjs/i18n', '@nuxtjs/color-mode'],
 
   runtimeConfig: {
     apiUrl: '',
@@ -23,4 +29,28 @@ export default defineNuxtConfig({
     strategy: 'prefix_except_default',
     langDir: 'locales/',
   },
+
+  components: {
+    dirs: [{ path: '~/components', pathPrefix: false }]
+  },
+
+  css: [
+    '~/assets/css/fonts.css',
+    '~/assets/css/variables.css',
+    '~/assets/css/main.css'
+  ],
+
+  ui: {
+    theme: {
+      colors: [
+        'primary',
+        'secondary'
+      ]
+    }
+  },
+
+  colorMode: {
+    preference: 'light',
+    fallback: 'light'
+  }
 })
