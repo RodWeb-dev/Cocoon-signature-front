@@ -1,53 +1,113 @@
-@import "tailwindcss";
-@import "@nuxt/ui";
 @import url('fonts.css');
 @import url('variables.css');
+@import "tailwindcss";
+@import "@nuxt/ui";
 
 
 @theme static {
-    --color-lightwood-50: #A88561;
-    --color-lightwood-100: #9C7752;
-    --color-lightwood-200: #8F6942;
-    --color-lightwood-300: #825B33;
-    --color-lightwood-400: #754d24;
-    --color-lightwood-500: #693E14;
-    --color-lightwood-600: #5C3005;
-    --color-lightwood-700: #4F2800;
-    --color-lightwood-800: #4F2800;
-    --color-lightwood-900: #361B00;
 
-    --color-darkwood-50: #594D40;
-    --color-darkwood-100: #4F4133;
-    --color-darkwood-200: #453626;
-    --color-darkwood-300: #3B2B1A;
-    --color-darkwood-400: #31200e;
-    --color-darkwood-500: #261400;
-    --color-darkwood-600: #1C0E00;
-    --color-darkwood-700: #170C00;
-    --color-darkwood-800: #120900;
-    --color-darkwood-900: #080400;
+    --font-sans: 'Bellerose', system-ui, sans-serif;
+
+    --color-lightwood-50: #E1BF9D;
+    --color-lightwood-100: #D5A676;
+    --color-lightwood-200: #C98C4F;
+    --color-lightwood-300: #B07336;
+    --color-lightwood-400: #89592A;
+    --color-lightwood-500: #754d24;
+    --color-lightwood-600: #4E3318;
+    --color-lightwood-700: #3B2612;
+    --color-lightwood-800: #271A0C;
+    --color-lightwood-900: #140D06;
+    --color-lightwood-950: #0F0D0A;
+
+    --color-darkwood-50: #CF9354;
+    --color-darkwood-100: #BB7A35;
+    --color-darkwood-200: #93602A;
+    --color-darkwood-300: #6B461E;
+    --color-darkwood-400: #442C13;
+    --color-darkwood-500: #31200e;
+    --color-darkwood-600: #281A0B;
+    --color-darkwood-700: #24170A;
+    --color-darkwood-800: #201509;
+    --color-darkwood-900: #140D06;
+    --color-darkwood-950: #030100;
+
+    --color-success-50: #B8D6C3;
+    --color-success-100: #97C3A8;
+    --color-success-200: #77B18D;
+    --color-success-300: #599B73;
+    --color-success-400: #477B5B;
+    --color-success-500: #3d6b4f;
+    --color-success-600: #2B4A37;
+    --color-success-700: #1C3124;
+    --color-success-800: #132018;
+    --color-success-900: #09100C;
+    --color-success-950: #060A07;
+
+    --color-warning-50: #ECD69C;
+    --color-warning-100: #E4C472;
+    --color-warning-200: #DCB247;
+    --color-warning-300: #C99B26;
+    --color-warning-400: #9F7A1E;
+    --color-warning-500: #8a6a1a;
+    --color-warning-600: #5E4912;
+    --color-warning-700: #40320C;
+    --color-warning-800: #2B2108;
+    --color-warning-900: #151104;
+    --color-warning-950: #090702;
+
+    --color-error-50: #EDC5BF;
+    --color-error-100: #E2A197;
+    --color-error-200: #D87D6F;
+    --color-error-300: #CD5947;
+    --color-error-400: #B04130;
+    --color-error-500: #9b3a2a;
+    --color-error-600: #742B20;
+    --color-error-700: #4C1C15;
+    --color-error-800: #280F0B;
+    --color-error-900: #140705;
+    --color-error-950: #100604;
 }
 
-/*** Layout ***/
+:root {
+    --primary: var(--color-lightwood-500);
+    --secondary: var(--color-darkwood-500);
+    --bg-primary: #754d2418;
+    --bg-secondary: #31200e18;
+}
 
 * {
     box-sizing: border-box;
 }
 
 body {
-    color: var(--secondary);
-    background-color: var(--bg-primary);
-    font-family: var(--text);
     font-size: var(--font-size);
     text-wrap: wrap;
 }
 
-button {
+header,
+nav,
+footer {
     color: var(--primary);
+}
+
+main {
+    color: var(--secondary);
+    margin: 3vh auto;
+}
+
+button,
+a,
+a:active,
+a:visited {
     cursor: pointer;
 }
 
-/*** Typo ***/
+p,
+li,
+span {
+    font-family: var(--text);
+}
 
 h1,
 h2,
@@ -56,19 +116,18 @@ h4,
 h5,
 h6 {
     font-family: var(--headline);
+    color: var(--primary);
 }
 
 h1 {
-    color: var(--primary);
     font-size: var(--h1);
     font-weight: 900;
     line-height: calc(var(--h1) * 1.25);
-    margin: 1dvh 0;
+    margin: 3dvh 0;
     text-align: center;
 }
 
 h2 {
-    color: var(--primary);
     font-size: var(--h2);
     font-weight: 700;
     line-height: calc(var(--h2) * 1.25);
@@ -76,7 +135,6 @@ h2 {
 }
 
 h3 {
-    color: var(--primary);
     font-size: var(--h3);
     font-weight: 600;
     line-height: calc(var(--h3) * 1.25);
@@ -84,7 +142,6 @@ h3 {
 }
 
 h4 {
-    color: var(--primary);
     font-size: var(--h4);
     font-weight: 500;
     line-height: calc(var(--h4) * 1.25);
@@ -94,13 +151,23 @@ h4 {
 a,
 a:active,
 a:visited,
-label {
+label,
+button,
+input,
+textarea {
     font-family: var(--interface);
-    color: var(--primary);
-    cursor: pointer;
 }
 
-/*** custom class ***/
+a *,
+label *,
+button *,
+input *,
+textarea * {
+    font-family: inherit;
+}
+
+
+/*** Layout ***/
 
 .wrapper {
     width: 96%;
@@ -111,22 +178,6 @@ label {
 .main.wrapper {
     position: relative;
     flex: 1 0 auto;
-}
-
-.txt-primary {
-    color: var(--primary);
-}
-
-.txt-secondary {
-    color: var(--secondary);
-}
-
-.bg-primary {
-    background-color: var(--bg-primary);
-}
-
-.bg-secondary {
-    background-color: var(--bg-secondary);
 }
 
 /* === Tablet === */
@@ -141,6 +192,6 @@ label {
 
 @media screen and (min-width: 1200px) {
     .wrapper {
-        width: clamp(960px, 80dvw, 1500px);
+        width: clamp(960px, 100%, 1500px);
     }
 }

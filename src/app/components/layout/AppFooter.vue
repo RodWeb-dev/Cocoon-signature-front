@@ -11,24 +11,24 @@
             <hr v-if="mobile">
             <BrandContact />
             <hr v-if="mobile">
-            <div id="identity">
+            <div class="links">
                 <ul>
                     <li>
-                        <NuxtLink to="/about#identite">{{ $t('link.identite') }}</NuxtLink>
+                        <NuxtLink to="/presentation#identite">{{ $t('link.identite') }}</NuxtLink>
                     </li>
                     <li>
-                        <NuxtLink to="/about#philosophie">{{ $t('link.philo') }}</NuxtLink>
+                        <NuxtLink to="/presentation#secrets">{{ $t('link.secrets') }}</NuxtLink>
                     </li>
                     <li>
-                        <NuxtLink to="/about#ressources">{{ $t('link.ressource') }}</NuxtLink>
+                        <NuxtLink to="/presentation#tomorrow">{{ $t('link.tomorrow') }}</NuxtLink>
                     </li>
                     <li>
-                        <NuxtLink to="/about#partenaires">{{ $t('link.partenaire') }}</NuxtLink>
+                        <NuxtLink to="/presentation#partenaires">{{ $t('link.partenaire') }}</NuxtLink>
                     </li>
                 </ul>
             </div>
             <hr v-if="mobile">
-            <div id="legal">
+            <div class="links">
                 <ul>
                     <li>
                         <NuxtLink to="/mentions-legales">{{ $t('link.ml') }}</NuxtLink>
@@ -54,7 +54,7 @@
         width: 100dvw;
         height: min-content;
         flex: none;
-        background-color: linear-gradient(var(--bg-secondary), var(--bg-tertiary));
+        background: linear-gradient(white, var(--bg-secondary));
     }
     .wrapper {
         border-top: solid 1px var(--primary);
@@ -65,12 +65,7 @@
         margin-bottom: 2vh;
     }
 
-    #identity {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #legal {
+    .links {
         display: flex;
         flex-direction: column;
     }
@@ -88,7 +83,8 @@
 
     @media screen and (min-width: 1200px) {
         .wrapper {
-            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            grid-template-columns: 30% 30% 20% 20%;
         }
     }
 

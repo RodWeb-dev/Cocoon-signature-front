@@ -24,6 +24,13 @@ useHead({
         }
     ]
 })
+
+useSeoMeta({
+    ogType: 'website',
+    ogLocale: 'fr_FR',
+    ogSiteName: 'Cocoon-Signature'
+})
+
 </script>
 
 <template>
@@ -47,5 +54,5 @@ useHead({
         justify-content: space-between;
         align-items: center;
     }
-    
+
 </style>

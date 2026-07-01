@@ -5,7 +5,12 @@ export default defineAppConfig({
         },
         colors: {
             primary: 'lightwood',
-            secondary: 'darkwood'
+            secondary: 'darkwood',
+            success: 'success',
+            warning: 'warning',
+            error: 'error',
+            info: 'taupe',
+            neutral: 'stone'
         }
     }
 })

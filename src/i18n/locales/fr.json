@@ -48,10 +48,10 @@
         "home": "Accueil",
         "collections": "Visitez nos univers",
         "products": "Découvrez nos créations",
-        "about": "À propos Cocoon Signature",
+        "presentation": "À propos de Cocoon Signature",
         "contact": "Contact",
-        "philo": "Qualité haut de gamme et design unique",
-        "ressource": "Fabrication locales et respect de l'environnement",
+        "tomorrow": "Et demains",
+        "secrets": "Secrets de fabrications",
         "partenaire": "Nos partenaires",
         "identite": "Qui sommes nous ?",
         "ml": "Mentions légales",
@@ -63,17 +63,35 @@
     "aria": {
         "main_nav": "menu de navigation principale",
         "modal_cart": "aperçu du panier",
-        "modal_user": "modale de connexion ou inscription"
+        "modal_user": "modale de connexion ou inscription",
+        "cal-com": "modale de prise de rendez-vous en ligne via cal.com"
     },
     "label": {
-        "email": "Adresse mail :"
+        "email": "Adresse mail :",
+        "fullname": "Nom complet :",
+        "subject": "Sujet de la demande :",
+        "content": "Votre demande :"
     },
     "placeholder": {
         "email": "adress\\@mail.fr",
         "search": "Rechercher..."
     },
+    "z": {
+        "email": "Le format de l'adresse est incorrect",
+        "required": "Champs obligatoire"
+    },
     "alt": {
-        "logo": "Logo de Cocoon Signature"
+        "logo": "Logo de Cocoon Signature",
+        "presentation-corinne": "Corinne Gallot fondatrice et dirigeante de Cocoon Signature.",
+        "presentation-inspiration": "Mes sources d'inspirations sont aussi nombreuses que variées",
+        "presentation-saw": "Débit de bois massif sur une scie à format",
+        "presentation-gluing": "Collage des fauteuils N°91",
+        "presentation-wood": "Livraison de chêne reçu !",
+        "presentation-stock": "Bois sec en attente d'usinage...",
+        "presentation-spray": "Vernis appliqué au pistolet",
+        "presentation-brush": "Application d'une teinte au pinceau",
+        "presentation-forest": "Canopé en contre-jour vue d'en dessous",
+        "presentation-plant": "Deux mains entourant une jeune pousse"
     },
     "newsletter": {
         "hook": "Recevez par mail les dernières actualités et les offres de Cocoon Signature",
@@ -83,9 +101,53 @@
     },
     "brand": {
         "hook": "Suivez notre activité sur les réseaux",
-        "coordonnees": "Nos coordonnées"
+        "coordonnees": "Nos coordonnées :"
     },
-    "home": {
-        "h1": "Cocoon Signature"
+    "pages": {
+        "home": {
+            "seo-title": "Cocoon Signature | Mobilier artisanal en bois, fabriqué en France",
+            "seo-description": "Cocoon Signature, mobilier artisanal et décoration en bois conçu et fabriqué dans la Loire. Design unique, bois éco-responsables. Abat-jours haut de gamme fait mains.",
+            "h1": "Cocoon Signature"
+        },
+        "presentation": {
+            "seo-title": "Cocoon Signature | Histoire, engagements et valeurs",
+            "seo-description": "Cocoon Signature, découvrez notre univers, nos inspirations, nos valeurs et l’équipe qui donne vie à vos intérieurs.",
+            "h1": "Découvrez l'envers du décors",
+            "once-h2": "Il était une fois ...",
+            "once-a1h": "Une maison, une passion",
+            "once-a1p1": "Tout a commencé par un besoin personnel : créer des meubles uniques pour mon intérieur. Petit à petit, une simple passion s'est alors transformée en une véritable vocation avec une formation en ébénisterie et un intérêt tout particulier pour le design et son histoire.",
+            "once-a1p2": "Issue des métiers de la sphère sociale, j’ai toujours eu à cœur d’être à l’écoute et d’apporter du bien-être aux autres. Aujourd’hui, cette attention et cette empathie s’expriment à travers le mobilier que je conçois. Chaque pièce est pensée pour apporter douceur, harmonie et confort, afin que chaque intérieur devienne un véritable cocon.",
+            "once-a1p3": "J’ai imaginé Cocoon Signature dans une approche humaine, où chaque création raconte une histoire et répond à un besoin authentique.",
+            "once-a2h": "Inspiration",
+            "once-a2p1": "Cocoon Signature est une maison de création où le bois devient une passerelle entre artisanat et bien-être, façonnant des meubles qui apportent chaleur et douceur à chaque intérieur. Chaque pièce est une invitation à ralentir, à savourer le confort d’un espace pensé avec soin et émotion.",
+            "once-a2p2": "Mon inspiration naît d’une courbe harmonieuse esquissée sur un carnet, du toucher d’une essence de bois, d’un détail architectural croisé au détour d’une rue.",
+            "once-a2p3": "Et de la rencontre avec ceux qui partagent cette passion du fait main et du mobilier qui a une âme.",
+            "avenir-h2": "Et demain ?",
+            "avenir-a1h": "Nos engagements",
+            "avenir-a1p1": "Créer du mobilier en bois, c’est puiser dans les ressources de la nature. Le bois est une ressource précieuse, et il nous tient à cœur de préserver cet équilibre. Il est donc essentiel pour nous de lui rendre ce qu’elle nous offre.",
+            "avenir-a1p2": "Pour chaque meuble fabriqué, nous contribuons à la reforestation, afin de redonner à la nature ce qu’elle nous offre. Un geste simple et essentiel pour que notre passion rime avec un un avenir plus responsable, où artisanat et respect de l’environnement participent à la préservation de notre planète.",
+            "avenir-a1p3": "Pour chaque meuble une somme est reversée à une association œuvrant pour la reforestation et la bonne gestion de nos forêts.",
+            "secret-h2": "Secrets de fabrication",
+            "secret-a1h": "Savoir-faire et Artisanat",
+            "secret-a1p1": "Toutes les collections sont imaginées et fabriqué dans notre atelier. Nous concevons chaque pièce selon des procédés artisanaux qui assurent qualité et robustesse dans le temps. Tous les éléments annexes (céramiques, cuirs, tapisserie) sont également réalisés par des artisans en France.",
+            "secret-a1p2": "Chaque pièce est fabriquée sur commande ou en modèle unique. Ainsi nous produisons au plus juste en fonction des besoins et ainsi nous protégeons nos ressources.",
+            "secret-a2h": "Nos matériaux",
+            "secret-a2p1": "Ils sont sélectionnés par nos soins ou en confiance avec nos fournisseurs régionaux. Le mobilier et décoration intérieure est principalement fabriquée en chêne massif, ou panneaux traditionnelle d’ébénisterie et placage. D’autres essences françaises sont également valorisées tel que le noyer, le châtaignier, le frêne.",
+            "secret-a2p2": "En revanche, pour une question de durabilité le mobilier extérieur est réalisé en bois exotique issus de forets durablement gérées. Ils ne nécessitent pas de traitements car naturellement imputrescible et se pare d’une belle robe grise avec le temps.",
+            "secret-a3h": "Les finitions écoresponsables",
+            "secret-a3p1": "Les finitions réalisées sur le mobilier intérieur sont principalement à base d’eau pour protéger et assurer la durabilité du mobilier. Pour le côté esthétique, des teintes hydrosolubles sont également utilisées. Elles n’émettent aucunes substances nocives à l’application et dans votre intérieur.",
+            "secret-a3p2": "Véritable signature de notre marque, l’ensemble des finitions suit de longs procédés manuels (plusieurs applications, ponçage multiples…)"
+        },
+        "contact": {
+            "seo-title": "Nous contacter | Cocoon Signature",
+            "seo-description": "Des questions, besoins d'inormations supplémentaire, prenez rendez-vous ou contacter nous via le formulaire dédié",
+            "h1": "Nous contacter",
+            "rdv-h2": "Prendre rendez-vous",
+            "rdv-p": "Vous souhaitez nous rencontrer, nous présenter un projet ? Prenez rendez-vous en boutique ou par téléphone",
+            "rdv-b": "Prise de rendez-vous",
+            "form-h2": "Formulaire de contact",
+            "form-p": "Nous sommes à votre disposition pour répondre à vos questions. Merci de bien vouloir complèter le formulaire, nous vous répondrons rapidement.",
+            "form-submit": "Envoyez votre demande"
+        }
     }
 }

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 
     const { toggleCart, toggleUser } = useMenuState()
+    const { mobile, tablet, desktop } = useBreakpoints()
 
 
 </script>
@@ -10,19 +11,22 @@
         <ul>
             <li>
                 <button @click="toggleCart" :aria-label="$t('aria.modal_cart')">
-                    <UIcon size="44" name="i-carbon-shopping-cart" />
+                    <UIcon :size="mobile ? '44' : tablet ? '40' : '32'"
+                    name="i-carbon-shopping-cart" color="primary" />
                 </button>
             </li>
             <li>
                 <button @click="toggleUser" :aria-label="$t('aria.modal_user')">
-                    <UIcon size="44" name="i-carbon-user-avatar-filled-alt" />
+                    <UIcon :size="mobile ? '44' : tablet ? '40' : '32'"
+                    name="i-carbon-user-avatar-filled-alt" color="primary" />
                 </button>
             </li>
         </ul>
         <search>
             <UInput size="md" variant="outline" :placeholder="$t('placeholder.search')" name="filter" color="primary"/>
             <button type="submit">
-                <UIcon size="32" name="i-carbon-search-locate" />
+                <UIcon :size="mobile ? '32' : tablet ? '30' : '28'"
+                name="i-carbon-search-locate" color="primary" />
             </button>
         </search>
     </div>
@@ -49,21 +53,5 @@
         align-items: center;
         gap: 1dvh;
     }
-
-    /* === Tablet === */
     
-    @media screen and (min-width: 768px) {
-        .wrapper {
-            width: 90%;
-        }
-    }
-    
-    /* === Desktop === */
-    
-    @media screen and (min-width: 1200px) {
-        .wrapper {
-            width: clamp(960px, 80dvw, 1500px);
-        }
-    }
-
 </style>

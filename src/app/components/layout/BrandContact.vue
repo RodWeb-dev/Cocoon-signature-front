@@ -55,7 +55,7 @@
     address {
         display: flex;
         flex-direction: column;
-        gap: 1dvh;
+        gap: 0.3dvh;
     }
 
     span {

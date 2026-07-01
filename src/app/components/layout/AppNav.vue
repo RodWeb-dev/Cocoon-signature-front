@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-    const { nav } = useMenuState()
+    const { nav, toggleNav } = useMenuState()
     const { mobile, tablet } = useBreakpoints()
 
 </script>
@@ -9,19 +9,19 @@
     <nav v-if="nav">
         <ul>
             <li>
-                <NuxtLink to="/">{{ $t('link.home') }}</NuxtLink>
+                <NuxtLink @click="toggleNav" to="/">{{ $t('link.home') }}</NuxtLink>
             </li>
             <li>
-                <NuxtLink to="/collections">{{ $t('link.collections') }}</NuxtLink>
+                <NuxtLink @click="toggleNav" to="/collections">{{ $t('link.collections') }}</NuxtLink>
             </li>
             <li>
-                <NuxtLink to="/products">{{ $t('link.products') }}</NuxtLink>
+                <NuxtLink @click="toggleNav" to="/products">{{ $t('link.products') }}</NuxtLink>
             </li>
             <li>
-                <NuxtLink to="/about">{{ $t('link.about') }}</NuxtLink>
+                <NuxtLink @click="toggleNav" to="/presentation">{{ $t('link.presentation') }}</NuxtLink>
             </li>
             <li>
-                <NuxtLink to="/contact">{{ $t('link.contact') }}</NuxtLink>
+                <NuxtLink @click="toggleNav" to="/contact">{{ $t('link.contact') }}</NuxtLink>
             </li>
         </ul>
         <AppActions v-if="mobile || tablet" />
@@ -37,7 +37,7 @@ nav {
     border-right: solid 1px var(--primary);
     border-left: solid 1px var(--primary);
     border-bottom: solid 1px var(--primary);
-    background-color: var(--bg-primary);
+    background-color: white;
 }
 
 ul {
@@ -56,11 +56,15 @@ li {
 
 @media screen and (min-width: 768px) {
     nav {
-        width: 70%;
+        width: max-content;
         position: absolute;
         top: 0;
         left: 0;
         z-index: 1000;
+    }
+
+    li {
+        font-size: var(--h4);
     }
 }
 
@@ -69,7 +73,14 @@ li {
 @media screen and (min-width: 1200px) {
     nav {
         padding: 2dvh;
-        width: max-content;
+    }
+
+    ul {
+        gap: 0;
+    }
+
+    li {
+        font-size: 1.2rem;
     }
 }
 

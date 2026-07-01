@@ -2,20 +2,25 @@
 
     import type { FormSubmitEvent } from '@nuxt/ui'
     import { FetchError } from 'ofetch'
+    import { z } from 'zod'
 
     const { setFlash } = useFlash()
     const { t } = useI18n()
     const { $api } = useApi()
-    const state = reactive({
+
+    const schema = z.object({
+        email: z.email({ error: t('z.email')}),
+        accept: z.boolean({ error: t('newsletter.accept_error')}).parse(true)
+    })
+
+    type Schema = z.output<typeof schema>
+
+    const state = reactive<Schema>({
         email: '',
         accept: false
     })
 
-    async function onSubmit(event: FormSubmitEvent<typeof state>) {
-        if (!state.accept) {
-            setFlash('warning', t('newsletter.accept_error'))
-            return
-        }
+    async function onSubmit(event: FormSubmitEvent<Schema>) {
         try {
             const response = await $api<ApiResponse>('/newsletter', {
                 method: 'POST',
@@ -37,10 +42,10 @@
 <template>
     <div>
         <p>{{ $t('newsletter.hook') }}</p>
-        <UForm :state="state" class="" @submit="onSubmit">
+        <UForm :schema="schema" :state="state" class="" @submit="onSubmit">
       
             <div class="form">
-                <UCheckbox v-model="state.accept" name="accept" required color="secondary" />
+                <UCheckbox v-model="state.accept" name="accept" color="primary" />
                 
                 <i18n-t keypath="newsletter.rgpd" tag="small">
                     <template #cgu>
@@ -54,9 +59,9 @@
 
             <div class="form">
                 <UInput v-model="state.email" :placeholder="$t('placeholder.email')"
-                color="primary" variant="subtle" required name="email" />
+                color="primary" variant="subtle" name="email" />
                 
-                <UButton type="submit" variant="solid" color="secondary">
+                <UButton type="submit" variant="solid" color="primary">
                     {{ $t('newsletter.submit') }}
                 </UButton>
             </div>
@@ -73,7 +78,8 @@
     form {
         display: flex;
         flex-direction: column;
-        gap: 1vh;
+        margin: 1dvh 0;
+        gap: 1dvh;
     }
 
     .form {
@@ -83,6 +89,7 @@
 
     small {
         font-size: 0.5rem;
+        margin-left: 3vw;
     }
 
     button {
@@ -92,7 +99,7 @@
 
     @media screen and (min-width: 1200px) {
         form {
-            gap: 2dvh;
+            gap: 1dvh;
         }
 
         .form {
@@ -100,7 +107,9 @@
         }
 
         small {
-            font-size: 0.8rem;
+            font-size: 0.6rem;
+            line-height: 0.8rem;
+            margin-left: 0;
         }
     }
 

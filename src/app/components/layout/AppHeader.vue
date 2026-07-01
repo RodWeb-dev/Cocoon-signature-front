@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
     const { toggleNav, toggleCart, toggleUser } = useMenuState()
-    const { desktop } = useBreakpoints()
+    const { mobile, tablet, desktop } = useBreakpoints()
 
 </script>
 
@@ -12,7 +12,7 @@
                 @click="toggleNav"
                 :aria-label="$t('aria.main_nav')"
                 >
-                <UIcon size="64" name="i-carbon-menu" />
+                <UIcon :size="mobile ? '64' : tablet ? '56' : '48'" name="i-carbon-menu" />
             </button>
             <NuxtLink to="/">
                 <picture>
@@ -27,7 +27,7 @@
 <style lang="css" scoped>
 
     header {
-        background-color: linear-gradient(var(--bg-tertiary), var(--bg-secondary));
+        background: linear-gradient(var(--bg-primary), white);
         width: 100%;
         height: min-content;
         flex: none;
@@ -39,23 +39,5 @@
         justify-content: space-between;
         align-items: center;
     }
-    button {
-        color: var(--primary);
-    }
 
-    /* === Tablet === */
-
-    @media screen and (min-width: 768px) {
-        .wrapper {
-            width: 90%;
-        }
-    }
-
-    /* === Desktop === */
-
-    @media screen and (min-width: 1200px) {
-        .wrapper {
-            width: clamp(960px, 80dvw, 1500px);
-        }
-    }
 </style>
