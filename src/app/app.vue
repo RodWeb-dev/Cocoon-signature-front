@@ -1,6 +1,12 @@
+<script setup>
+const colorMode = useColorMode()
+
+colorMode.preference = 'light'
+colorMode.value = 'light'
+</script>
+
 <template>
-  <div>
-    <NuxtRouteAnnouncer />
-    <NuxtWelcome />
-  </div>
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
 </template>

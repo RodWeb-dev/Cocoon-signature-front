@@ -1,0 +1,36 @@
+:root {
+
+    --font-size: 14px;
+
+    --h1: calc(var(--font-size) * 2.3);
+    --h2: calc(var(--font-size) * 2.9);
+    --h3: calc(var(--font-size) * 1.6);
+    --h4: calc(var(--font-size) * 1.4);
+
+    --interface: 'Bellerose';
+    --headline: 'Lavinia';
+    --text: 'Caviar Dreams';
+    --cite: 'Autography';
+}
+
+@media screen and (min-width: 768px) {
+    :root {
+        --font-size: 15px;
+
+        --h1: calc(var(--font-size) * 2.4);
+        --h2: calc(var(--font-size) * 2.0);
+        --h3: calc(var(--font-size) * 1.7);
+        --h4: calc(var(--font-size) * 1.5);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    :root {
+        --font-size: 16px;
+
+        --h1: calc(var(--font-size) * 2.6);
+        --h2: calc(var(--font-size) * 2.1);
+        --h3: calc(var(--font-size) * 1.8);
+        --h4: calc(var(--font-size) * 1.6);
+    }
+}

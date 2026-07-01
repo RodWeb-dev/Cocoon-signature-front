@@ -12,7 +12,7 @@ services:
       - /app/node_modules
     environment:
       - NODE_ENV=development
-      - NUXT_PUBLIC_API_URL=http://api.cocoon-signature.test
+      - NUXT_API_URL=http://cocoon-back:80
       - NUXT_HOST=0.0.0.0
       - NUXT_PORT=3000
     labels:
